@@ -1,6 +1,98 @@
 #page-login-index.moove-login {
-    background-color: #f1f1f1;
     margin-left: 0;
+
+    #page {
+        padding: 0;
+
+        #page-content {
+            margin: 0;
+
+            #maincontent {
+                height: 0;
+            }
+        }
+    }
+
+    .login-content {
+        background-color: #fff;
+        width: 520px;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 80px 32px 0 32px;
+
+        .logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        #username,
+        #password {
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            height: 60px;
+
+            &:focus {
+                border-color: #f5a623;
+                -webkit-box-shadow: 0 0 0 0.2rem rgba(245, 166, 35, 0.5);
+                box-shadow: 0 0 0 0.2rem rgba(245, 166, 35, 0.5);
+            }
+        }
+
+        #username {
+            margin-bottom: 15px;
+        }
+
+        .forgotpassword {
+            text-align: right;
+            margin: .5rem 0 .5rem 0;
+
+            a {
+                color: #39393a;
+            }
+        }
+
+        #loginbtn {
+            background-color: #000000;
+            border: none;
+            color: #fff20a;
+            padding: 1rem .75rem;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        .cookiesenabled {
+            text-align: center;
+            margin-top: 1rem;
+            color: #39393a;
+            background-color: #f2f2f2;
+            padding: 4px 0;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        .guestblock {
+            p {
+                color: #39393a;
+                font-weight: 700;
+                margin-top: 2rem;
+                text-align: center;
+            }
+
+            .btn-guest {
+                padding: 1rem .75rem;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+
+                border: 1px solid #e5e5e5;
+                box-sizing: border-box;
+                box-shadow: 0 2px 4px rgba(159, 159, 159, 0.5);
+            }
+        }
+    }
 
     #page-wrapper {
         padding-bottom: 0;
@@ -15,124 +107,6 @@
         &::after {
             min-height: 0;
         }
-    }
-
-    .logo {
-        text-align: center;
-        margin-bottom: 2rem;
-
-        img {
-            max-height: 200px;
-        }
-    }
-
-    .row {
-        margin: 0;
-    }
-
-    .instructionspanel {
-        border-radius: $m-login-padding;
-        border: none;
-    }
-
-    .loginpanel {
-        border-radius: $m-login-padding;
-        border: none;
-
-        .card-block {
-            padding: 0;
-
-            .form {
-                padding: 20px 15px;
-                height: $m-login-boxheight;
-                max-height: $m-login-boxheight;
-
-                .welcome {
-                    font-size: 1.2rem;
-                }
-
-                .input-group-addon {
-                    width: 40px;
-                    line-height: 30px;
-                    padding: 4px 10px;
-                    margin-bottom: 0;
-                    font-size: 1rem;
-                    text-align: center;
-                    background-color: #eceeef;
-                    border: 1px solid rgba(0,0,0,.15);
-                    border-right: 0;
-                }
-                .input-group-username .input-group-addon {
-                    border-bottom-left-radius: 0;
-                    border-bottom-right-radius: 0;
-                }
-                .input-group-password .input-group-addon {
-                    border-top: 0;
-                    border-top-left-radius: 0;
-                    border-top-right-radius: 0;
-                }
-                #username,
-                #password {
-                    border: 1px solid rgba(0, 0, 0, .15);
-                    height: 44px;
-                }
-                #username {
-                    border-bottom-left-radius: 0;
-                    border-bottom-right-radius: 0;
-                }
-                #password {
-                    border-top: 0;
-                    border-top-left-radius: 0;
-                    border-top-right-radius: 0;
-                }
-                #loginbtn {
-                    padding: 0.5rem;
-                }
-            }
-
-            .instructions {
-                background-color: $brand-primary;
-                padding: 60px 15px;
-                color: #fff;
-                min-height: $m-login-boxheight;
-
-                img {
-                    max-width: 100%;
-                }
-
-                .text-info {
-                    color: #fff !important;
-                }
-
-                h2,
-                h3 {
-                    color: #fff;
-                }
-
-                hr {
-                    width: 50%;
-                    margin-top: 0;
-                    border-top: 1px solid rgba(255, 255, 255, .7);
-                }
-
-                .m-t-2 {
-                    margin-top: 1rem !important;
-                }
-
-                .btn-secondary {
-                    border: none;
-                }
-            }
-        }
-    }
-
-    .box.generalbox.boxaligncenter {
-        border-color: $card-border-color;
-        border-radius: $card-border-radius;
-        -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        background-color: #fff;
-        padding: 2rem !important;
     }
 }
 
@@ -162,5 +136,34 @@
 #page-login-index.moove-login {
     .plugins_standard_footer_html {
         display: none;
+    }
+}
+
+@media (min-width: 1920px) {
+    #page-login-index.moove-login .login-content {
+        padding-top: 200px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .login-content {
+        width: calc(100% - 40px) !important;
+        margin: 20px auto !important;
+        padding: 15px !important;
+        height: calc(100vh - 40px) !important;
+
+        .logo {
+            margin: 1rem 0 !important;
+        }
+
+        #username,
+        #password {
+            height: 50px !important;
+        }
+
+        #loginbtn,
+        .guestblock .btn-guest {
+            padding: .75rem .75rem !important;
+        }
     }
 }
